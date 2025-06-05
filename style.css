@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #6e93f7;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4070f4;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav.sticky {
+  background: #4070f4;
+  padding: 13px 0;
+}
+nav .navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.navbar .logo a {
+  font-weight: 500;
+  font-size: 35px;
+  color: #4070f4;
+}
+nav.sticky .logo a {
+  color: #fff;
+}
+.navbar .menu {
+  display: flex;
+  position: relative;
+}
+.menu li {
+  list-style: none;
+  margin: 0 20px;
+}
+.menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E2431;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.menu a:hover {
+  color: #4070f4;
+}
+nav.sticky .menu a {
+  color: #fff;
+}
+nav.sticky .menu a:hover {
+  color: #0E2431;
+}
+.navbar .media-icons a {
+  color: #4070f4;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a {
+  color: #fff;
+}
+
+/* Hamburger & Cancel Buttons */
+nav .menu-btn,
+.menu .cancel-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+.menu-btn {
+  color: #4070f4;
+}
+nav.sticky .menu-btn {
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 50px;
+  background: #fff;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+.hero-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+.hero-image {
+  flex: 1 1 40%;
+  min-width: 280px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.hero-section {
+  background-image: url('background.jpg'); /* Replace with correct relative path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.hero-text h2 {
+  color: #3b5bfe;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.hero-text button {
+  background: #3b5bfe;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Section & About */
+section {
+  padding-top: 40px;
+}
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.title span {
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+.title span::before,
+.title span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+.title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .left {
+  width: 45%;
+}
+.about .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about .right {
+  width: 55%;
+}
+.topic {
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about .right p {
+  text-align: justify;
+  color: #0E2431;
+}
+.button {
+  margin: 16px 0;
+}
+.button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+/* Skills */
+.skills {
+  background: #F0F8FF;
+}
+.skills .content {
+  padding: 40px 0;
+}
+.skills-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills-details .text {
+  width: 50%;
+}
+.skills-details p {
+  color: #0E2431;
+  text-align: justify;
+}
+.experience {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.experience .num {
+  color: #0E2431;
+  font-size: 80px;
+}
+.experience .exp {
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.skills-details .boxes {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box {
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic {
+  font-size: 20px;
+  color: #4070f4;
+}
+.skills-details .boxes .per {
+  font-size: 60px;
+  color: #4070f4;
+}
+
+/* Services */
+.services .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.services .boxes .box {
+  width: 300px;
+  height: 300px;
+  background-color: #4070f4;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.services .box a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.services .box:hover {
+  background: #4070f4;
+  color: #fff;
+}
+.services .box .icon {
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.services .box:hover .icon {
+  background: #fff;
+  color: #4070f4;
+}
+
+/* Contact */
+#contact {
+  background-color: #eaf4ff;
+  padding: 80px 20px;
+  text-align: center;
+}
+#contact h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+#contact hr {
+  width: 80px;
+  height: 3px;
+  background-color: #3b82f6;
+  border: none;
+  margin: 0 auto 30px;
+}
+#contact p {
+  font-size: 18px;
+  color: #0f172a;
+  margin: 10px 0;
+}
+#contact a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #4070f4;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a {
+  font-weight: 500;
+  color: #fff;
+}
+footer .text span a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-to-Top */
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1190px) {
+  .content {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .left {
+    width: 100%;
+    text-align: center;
+  }
+  .about .right {
+    width: 90%;
+    margin-top: 40px;
+  }
+  .services .box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+  }
+}
+@media (max-width: 750px) {
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu {
+    left: 0;
+  }
+  .menu a {
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 15px 0;
+  }
+  nav.sticky .menu a:hover {
+    color: #4070f4;
+  }
+  nav .media-icons {
+    display: none;
+  }
+  .menu-btn,
+  .cancel-btn {
+    display: block;
+  }
+  .skills-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-details .text,
+  .skills-details .boxes {
+    width: 100%;
+  }
+  .services .box {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .skills-details .per {
+    font-size: 50px;
+  }
+}
